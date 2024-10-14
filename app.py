@@ -1,31 +1,43 @@
 import os
 
-print("""
-░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
-██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
-╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
-░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
-██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
-╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
+def exibir_nome_do_programa():
+    print("""
+    ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
+    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
+    ╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
+    ░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
+    ██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
+    ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
+    """)
 
-        1. Cadatrar Restaurante
-        2. Listar Restaurentes
-        3. Ativar Restaurante
-        4. Sair do Aplicativo
-      """)
-
-opcao_escolhida = int(input('Escolha uma opção: '))
+def exibir_opcoes():
+    print('1. Cadatrar Restaurante')
+    print('2. Listar Restaurentes')
+    print('3. Ativar Restaurante')
+    print('4. Sair do Aplicativo\n')
 
 def finalizar_app(): 
     os.system('cls')
     print('Finalizando o App\n')
 
-if opcao_escolhida == 1:
-    print('Cadastrar Restaurante')
-elif opcao_escolhida == 2:
-    print('Listar Restaurantes')
-elif opcao_escolhida == 3:
-    print('Ativar Restaurante')
-else:
-    finalizar_app()
+def escolher_opcoes():
+    opcao_escolhida = int(input('Escolha uma opção: '))
+    
+    if opcao_escolhida == 1:
+        print('Adicionar restaurante')
+    elif opcao_escolhida == 2:
+        print('Listar restaurantes')
+    elif opcao_escolhida == 3:
+        print('Ativar restaurante')
+    elif opcao_escolhida == 4:
+        print('Finalizar app')
+    else:
+        print('Opção inválida!')
 
+def main():
+    exibir_nome_do_programa()
+    exibir_opcoes()
+    escolher_opcoes()
+
+if __name__ == '__main__':
+    main()
